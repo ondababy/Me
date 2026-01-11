@@ -1,0 +1,10 @@
+export { default as ProfileHeader } from './ProfileHeader';
+export { default as AboutSection } from './AboutSection';
+export { default as ExperienceTimeline } from './ExperienceTimeline';
+export { default as TechStack } from './TechStack';
+export { default as ProjectsSection } from './ProjectsSection';
+export { default as CertificationsSection } from './CertificationsSection';
+export { default as RecommendationsSection } from './RecommendationsSection';
+export { default as SocialLinks } from './SocialLinks';
+export { default as GallerySection } from './GallerySection';
+export { Navbar, FloatingChat } from './Navigation';
