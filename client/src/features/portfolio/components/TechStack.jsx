@@ -20,10 +20,11 @@ const TechStack = ({ techStack }) => {
       <Paper
         elevation={0}
         sx={{
-          p: { xs: 2.5, sm: 3 },
-          borderRadius: 3,
-          border: '1px solid',
-          borderColor: 'black',
+          p: { xs: 3, sm: 4 },
+          borderRadius: 0,
+          border: '2px solid',
+          borderTop: 'none',
+          borderColor: '#1a1a1a',
           background: '#ffffff',
         }}
       >
@@ -71,12 +72,16 @@ const TechStack = ({ techStack }) => {
                           label={tech}
                           size="small"
                           sx={{
-                            bgcolor: 'grey.100',
-                            color: 'grey.700',
+                            bgcolor: 'transparent',
+                            color: '#1a1a1a',
                             fontWeight: 500,
                             fontSize: '0.75rem',
+                            border: '1px solid',
+                            borderColor: '#1a1a1a',
+                            borderRadius: 0,
                             '&:hover': {
-                              bgcolor: 'grey.200',
+                              bgcolor: '#1a1a1a',
+                              color: '#ffffff',
                             },
                           }}
                         />

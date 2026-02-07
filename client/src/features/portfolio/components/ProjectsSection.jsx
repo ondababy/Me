@@ -13,10 +13,11 @@ const ProjectsSection = ({ projects }) => {
       <Paper
         elevation={0}
         sx={{
-          p: { xs: 2.5, sm: 3 },
-          borderRadius: 3,
-          border: '1px solid',
-          borderColor: 'black',
+          p: { xs: 3, sm: 4 },
+          borderRadius: 0,
+          border: '2px solid',
+          borderTop: 'none',
+          borderColor: '#1a1a1a',
           background: '#ffffff',
         }}
       >
@@ -51,14 +52,13 @@ const ProjectsSection = ({ projects }) => {
                   elevation={0}
                   sx={{
                     height: '100%',
-                    border: '1px solid',
-                    borderColor: 'black',
-                    borderRadius: 2,
+                    border: '2px solid',
+                    borderColor: '#1a1a1a',
+                    borderRadius: 0,
                     transition: 'all 0.2s ease',
                     '&:hover': {
-                      borderColor: 'black',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                      transform: 'translateY(-2px)',
+                      transform: 'translateY(-4px)',
+                      boxShadow: '4px 4px 0 #1a1a1a',
                     },
                   }}
                 >
@@ -106,8 +106,10 @@ const ProjectsSection = ({ projects }) => {
                           sx={{
                             height: 22,
                             fontSize: '0.7rem',
-                            bgcolor: 'grey.100',
-                            color: 'grey.600',
+                            bgcolor: 'transparent',
+                            color: '#1a1a1a',
+                            border: '1px solid #1a1a1a',
+                            borderRadius: 0,
                           }}
                         />
                       ))}
@@ -118,8 +120,9 @@ const ProjectsSection = ({ projects }) => {
                           sx={{
                             height: 22,
                             fontSize: '0.7rem',
-                            bgcolor: 'grey.100',
-                            color: 'grey.500',
+                            bgcolor: '#1a1a1a',
+                            color: '#ffffff',
+                            borderRadius: 0,
                           }}
                         />
                       )}

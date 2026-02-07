@@ -16,9 +16,9 @@ const ProfileHeader = ({ data }) => {
         elevation={0}
         sx={{
           p: { xs: 3, sm: 4, md: 5 },
-          borderRadius: 3,
-          border: '1px solid',
-          borderColor: 'black',
+          borderRadius: 0,
+          border: '2px solid',
+          borderColor: '#1a1a1a',
           background: '#ffffff',
         }}
       >
@@ -64,10 +64,10 @@ const ProfileHeader = ({ data }) => {
                 sx={{
                   width: { xs: 100, sm: 120, md: 140 },
                   height: { xs: 120, sm: 150, md: 170 },
-                  borderRadius: 3,
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                  border: '3px solid',
-                  borderColor: 'black',
+                  borderRadius: 0,
+                  boxShadow: 'none',
+                  border: '2px solid',
+                  borderColor: '#1a1a1a',
                 }}
                 variant="rounded"
               />
@@ -160,16 +160,13 @@ const ProfileHeader = ({ data }) => {
                       label={badge.text}
                       size="small"
                       sx={{
-                        background:
-                          badge.color === 'success'
-                            ? 'linear-gradient(135deg, #10b981, #059669)'
-                            : 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                        color: 'white',
+                        bgcolor: '#1a1a1a',
+                        color: '#ffffff',
                         fontWeight: 500,
                         fontSize: '0.75rem',
                         height: 28,
+                        borderRadius: 0,
                         '& .MuiChip-label': { px: 1.5 },
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                       }}
                     />
                   </motion.div>

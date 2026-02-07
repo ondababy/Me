@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Container, Box, Typography, Divider } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
 import {
   ProfileHeader,
   AboutSection,
@@ -19,11 +19,11 @@ const PortfolioPage = () => {
     <Box
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(180deg, #fafbfc 0%, #ffffff 100%)',
+        background: '#fafafa',
       }}
     >
       {/* Main Content */}
-      <Container maxWidth="lg" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
+      <Container maxWidth="md" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
         {/* Profile Header */}
         <ProfileHeader data={portfolioData} />
 
@@ -31,29 +31,19 @@ const PortfolioPage = () => {
         <Box
           sx={{
             mt: { xs: 4, sm: 5 },
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
-            gap: { xs: 3, sm: 4 },
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 0,
           }}
         >
-          {/* Left Column */}
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 3, sm: 4 } }}>
-            <AboutSection bio={portfolioData.personal.bio} />
-            <TechStack techStack={portfolioData.techStack} />
-          </Box>
-
-          {/* Right Column */}
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 3, sm: 4 } }}>
-            <ExperienceTimeline experience={portfolioData.experience} />
-            <CertificationsSection certifications={portfolioData.certifications} />
-            {portfolioData.recommendations.length > 0 && (
-              <RecommendationsSection recommendations={portfolioData.recommendations} />
-            )}
-          </Box>
-        </Box>
-
-        {/* Full Width Sections */}
-        <Box sx={{ mt: { xs: 4, sm: 5 }, display: 'flex', flexDirection: 'column', gap: { xs: 3, sm: 4 } }}>
+          {/* Stacked Sections with Connected Borders */}
+          <AboutSection bio={portfolioData.personal.bio} />
+          <ExperienceTimeline experience={portfolioData.experience} />
+          <TechStack techStack={portfolioData.techStack} />
+          <CertificationsSection certifications={portfolioData.certifications} />
+          {portfolioData.recommendations.length > 0 && (
+            <RecommendationsSection recommendations={portfolioData.recommendations} />
+          )}
           <ProjectsSection projects={portfolioData.projects} />
           <SocialLinks data={portfolioData} />
           <GallerySection gallery={portfolioData.gallery} />
@@ -65,18 +55,28 @@ const PortfolioPage = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <Divider sx={{ mt: 6, mb: 3 }} />
-          <Typography
-            variant="caption"
+          <Box
             sx={{
-              display: 'block',
-              textAlign: 'center',
-              color: 'text.secondary',
-              pb: 4,
+              mt: 0,
+              py: 4,
+              border: '2px solid',
+              borderTop: 'none',
+              borderColor: '#1a1a1a',
+              background: '#ffffff',
             }}
           >
-            © {new Date().getFullYear()} {portfolioData.personal.name}. All rights reserved.
-          </Typography>
+            <Typography
+              variant="caption"
+              sx={{
+                display: 'block',
+                textAlign: 'center',
+                color: 'text.secondary',
+                fontWeight: 500,
+              }}
+            >
+              © {new Date().getFullYear()} {portfolioData.personal.name}
+            </Typography>
+          </Box>
         </motion.footer>
       </Container>
 
